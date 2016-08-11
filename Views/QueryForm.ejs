@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Query Form</title>
+	<link href="/Views/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/Views/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+	<link href="/Views/css/layout.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<div class="portlet box green">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-gift"></i>DataBase and Query Details
+		</div>
+	</div>
+	<div class="portlet-body form">
+	<!-- BEGIN FORM-->
+		<form action="/Query" class="form-horizontal" method="POST">
+			<div class="form-body">
+				<div class="form-group">
+					<label class="col-md-3 control-label">Databse URL</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter the database url" name="url">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Collection Name</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter Collection Name" name="collection">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Query</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter your Query" name="query">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Projection</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter the Projection" name="fields">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Skip</label>
+					<div class="col-md-4">
+					<input type="text" class="form-control input-circle" placeholder="Enter the Collection Skip" name="skip">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Limit</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter the Limit" name="limit">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-3 control-label">Sort</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control input-circle" placeholder="Enter the sort" name="sort">
+					</div>
+				</div>
+				<div class="form-actions">
+					<div class="row">
+						<div class="col-md-offset-5 col-md-7">
+							<button type="submit" class="btn btn-circle blue">Submit</button>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+
+</html>
