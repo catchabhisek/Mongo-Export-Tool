@@ -2,8 +2,9 @@
   "name": "Mongo_Export_Tool",
   "version": "1.0.0",
   "description": "Returns the results of the query",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start":"nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,7 +12,7 @@
   ],
   "author": "Abhisek Panda",
   "license": "MIT",
-  "dependencies": 
+  "dependencies":
     {
     "ejs" : "latest",
     "express" : "latest",
@@ -28,5 +29,5 @@
     "passport-google-oauth2": "^0.1.6",
     "passport-local": "^1.0.0"
   	}
-  
+
 }

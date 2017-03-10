@@ -2,6 +2,8 @@ var express=require('express'),
 app = express(),
 server = require('http').createServer(app),
 router = require('./routes/index'),
+queryRoute = require('./routes/query'),
+downloadRoute = require('./routes/download'),
 mongoose = require('mongoose'),
 bodyParser = require('body-parser'),
 passport=require('./passport'),
@@ -27,3 +29,5 @@ app.use(session({
     activeDuration:5*60*1000
 }));
 app.use('/',router);
+app.use('/query',queryRoute);
+app.use('/download',downloadRoute);

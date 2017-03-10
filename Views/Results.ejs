@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <title>Result</title>
-<link href="/Views/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="/Views/css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/layout.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -12,7 +12,7 @@
 <div class="col-md-12">
 	<div class="portlet box yellow">
 		<div class="portlet-title">
-			<h1><b>Query Results</b>  
+			<h1><b>Query Results</b>
                	<div class="btn-group pull-right">
                   	<a class="btn default" data-toggle="modal" href="/download">
                        	Download in .csv
@@ -23,28 +23,28 @@
 		<div class="portlet-body">
 			<div class="table-scrollable">
 				<table class="table table-bordered table-hover">
-				<thead>						
+				<thead>
 					<tr>
 						<% for(var k in Doc[0]) {  %>                      <!-- Iterate over the Keys -->
 
-							<!-- to Iterate over the nested JSON or String array --> 
-        					<% if(typeof(Doc[0][k])=="object"){  %> 
-        						<!-- to Iterate over the nested JSON array or String Array -->        
+							<!-- to Iterate over the nested JSON or String array -->
+        					<% if(typeof(Doc[0][k])=="object"){  %>
+        						<!-- to Iterate over the nested JSON array or String Array -->
         						<% if(Array.isArray(Doc[0][k])){  %>
-									<% for(var i=0;i<Doc[0][k].length;i++) {%>        							
+									<% for(var i=0;i<Doc[0][k].length;i++) {%>
 										<% if(typeof(Doc[0][k][i])=="object"){  %>
-											<% for(var l in Doc[0][k][i]) {  %>		
+											<% for(var l in Doc[0][k][i]) {  %>
         										<th><%= k+'['+i+']'+'.'+l %></th>
         									<% } %>
         								<% } else {%>
         										<th><%= k+'.'+i %></th>
   										<% } %>
-        					    	<% } %>	
-        						<% } else {%>				
-        							<% for(var l in Doc[0][k]) {  %>		
+        					    	<% } %>
+        						<% } else {%>
+        							<% for(var l in Doc[0][k]) {  %>
         									<th><%= k+'.'+l %></th>
         							<% } %>
-  								<% } %>    	
+  								<% } %>
         					<% } else {%>
         						<th><%= k %></th>
   							<% } %>
@@ -54,37 +54,37 @@
 				<tbody>
 
 					<% for(var i=0;i<Doc.length;i++) {%>				 <!-- Iterate over the Keys -->
- 
+
  						<!-- to Iterate over the nested JSON or String array -->
       					<tr>
         				<% for(var k in Doc[i]) {  %>
         					<% if(typeof(Doc[i][k])=="object"){  %>
         						<!-- to Iterate over the nested JSON array or String Array -->
         						<% if(Array.isArray(Doc[i][k])){  %>
-									<% for(var j=0;j<Doc[i][k].length;j++) {%>        							
+									<% for(var j=0;j<Doc[i][k].length;j++) {%>
 										<% if(typeof(Doc[i][k][j])=="object"){  %>
-											<% for(var l in Doc[i][k][j]) {  %>		
+											<% for(var l in Doc[i][k][j]) {  %>
         										<th><%=Doc[i][k][j][l]  %></th>
         									<% } %>
         								<% } else {%>
         										<th><%= Doc[i][k][j] %></th>
   										<% } %>
-        					    	<% } %>	
+        					    	<% } %>
         						<% } else {%>
-        							<% for(var l in Doc[i][k]) {  %>		
+        							<% for(var l in Doc[i][k]) {  %>
         									<th><%= Doc[i][k][l] %></th>
         							<% } %>
-  								<% } %>    	
+  								<% } %>
         					<% } else {%>
         						<th><%= Doc[i][k] %></th>
   							<% } %>
   						<% } %>
-      					</tr> 
+      					</tr>
     				<% } %>
 				</tbody>
 			</table>
 		</div>
-	</div>				
+	</div>
 </div>
 
 </body>
