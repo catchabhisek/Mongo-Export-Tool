@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://use.fontawesome.com/87a8b854d4.js"></script>
+    <style>
+        .selected {
+            color: green;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body ng-app="LoginApp" ng-controller="LoginTabs as loginCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <form class="form-horizontal" action='/login' method="POST">
+                    <fieldset>
+                        <div id="legend">
+                            <legend class=""><a ng-click="loginCtrl.showTab(1)" ng-class="{'selected':loginCtrl.tabs.login}">Login</a><a ng-class="{'selected':loginCtrl.tabs.register}" ng-click="loginCtrl.showTab(2)" style="margin-left:10px">Register</a></legend>
+                        </div>
+
+                        <div ng-show="loginCtrl.tabs.login" class="login-div">
+
+                            <div class="control-group">
+                                <!-- Email -->
+                                <label class="control-label" for="email">Email</label>
+                                <div class="controls">
+                                    <input type="email" id="email" name="email" placeholder="" class="input-xlarge">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <!-- Password-->
+                                <label class="control-label" for="password">Password</label>
+                                <div class="controls">
+                                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                </div>
+                            </div>
+                            <div class="control-group" style="margin-top:10px">
+                                <!-- Button -->
+                                <div class="controls">
+                                    <button class="btn btn-success">Login</button>
+                                    Or Sign In with <a class="btn btn-danger" href="/auth/google">Google <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a class="btn btn-primary" href="/auth/facebook">Facebook <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+                <form class="form-horizontal" action='/register' method="POST">
+
+                    <div ng-show="loginCtrl.tabs.register" class="register-div">
+                        <div class="control-group">
+                            <!-- Email -->
+                            <label class="control-label" for="email">Email</label>
+                            <div class="controls">
+                                <input required type="email" id="email" name="email" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- name -->
+                            <label class="control-label" for="username">Name</label>
+                            <div class="controls">
+                                <input required type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Password-->
+                            <label class="control-label" for="password">Password</label>
+                            <div class="controls">
+                                <input required type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group" style="margin-top:10px">
+                            <!-- Button -->
+                            <div class="controls">
+                                <button class="btn btn-success" type="submit">Register</button>
+                                Or Sign Up with <a class="btn btn-danger" href="/auth/google">Google <i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a class="btn btn-primary" href="/auth/facebook">Facebook <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
