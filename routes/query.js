@@ -1,16 +1,27 @@
 var router = require('express').Router();
 var csvConverter = require('../csv-converter');
 var MongoClient = require('mongodb').MongoClient;
+var User = require('../model/user');
 
-router.get('/',function(req,res){
-	res.render("QueryForm.ejs");
-})
+router.get('/',function(req,res,next){
+	if(!req.session.user) return res.redirect('/');
+	res.render("QueryForm.ejs",{user:req.session.user});
+});
 
+router.get('/history',function(req,res,next){
+	User.findOne({email:req.session.user.email},function(err,user){
+		res.json(user.history);
+	});
+});
 
 // Connecting to the Mongo db server
-router.post('/',function(req,res){
+router.post('/',function(req,res,next){
   var url = req.body.url;
   console.log(req.body);
+	User.update({email:req.session.user.email},{$push:{history:req.body}},null,function(err,user){
+		console.log("updated");
+		console.log(user.history);
+	});
   MongoClient.connect(url, function (err, db) {
     if (err) {
       	console.log('Unable to connect to the mongoDB server. Error:', err);

@@ -7,13 +7,18 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
 	<link href="css/layout.css" rel="stylesheet" type="text/css"/>
-
+	<script src="https://use.fontawesome.com/87a8b854d4.js"></script>
 </head>
 
 <div class="portlet box green">
 	<div class="portlet-title">
 		<div class="caption">
 			<i class="fa fa-gift"></i>DataBase and Query Details
+		</div>
+		<div class="navbar-right">
+			<a class="btn" style="color:white"><i class="fa fa-user" aria-hidden="true"></i> <%=user.name%></a>
+			<a class="btn" style="color:white"><i class="fa fa-history" aria-hidden="true"></i> History</a>
+			<a class="btn" href="/logout" style="color:white"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
 		</div>
 	</div>
 	<div class="portlet-body form">
