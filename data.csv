@@ -1,8 +1,0 @@
-_id,xtasyId,name,password,email,college,year,phone,gender,verification_hash,is_verified,events.0,events.1,events.2,events.3,events.4,events.5,events.6,__v,
-58af46b0b923e720d46de197,1000,santanu,$2a$10$tRRGMPFJRG8ndcfqFGCuBel5w2sZY9l0W74taO95YiJWYzOzTocPK,santanu@gmail.com,cet,3rd,12345,male,6c0fb5051f76f3474384aa5cca788099,true,1,3,4,16,9,5,12,0,
-58af497be7d772250cb323f6,1001,sanskriti,$2a$10$7iqlQ3PK.niTdiyT1rQ47eD9GDev.fxcITN93kLoHv.KZij8oEGNS,sanskriti@gmail.com,cet,3rd,12345,female,617a29a0fb3f270bc51009505dc62bae,false,0,
-58afb482f13cb133647ff3f0,1002,abc,$2a$10$91H7NbYFtCZeKhA4nmkpyujeQWIG87XiQuW5OR9Nqb5WOgMxinUI2,abc@gmail.com,cet,2nd,12345,male,8dc1b82c086540ade981fed4613496fb,false,0,
-58afb4a6f13cb133647ff3f1,1003,abcd,$2a$10$xPlEoAhTvRud623nJ6SrsO.EYB50SMBPQ/tCvVW8hu5qCFJVeXZo2,abcd@gmail,cet,2nd,12345,male,46abc18bb69f6ad5a429de4e552ef627,false,0,
-58afb7808f989214301c6e24,1004,hero,$2a$10$zuvH9RytLBAIi.x4gkcFDO.D3eM7viF6zaHZCnId7drlP4jIXtEPC,hero@gmail.com,hero,4th,12345,male,17cafaf55b0fd001e679e1714aec9a7a,false,0,
-58b00ae5bc82421c8caae44b,1005,shanta kar,$2a$10$JT4hCUuykXELvob7ahu4NeP3Mtz91PmPZB1yGVPmsUhj.Jj2DLEPa,kar.santanu43@gmail.com,1,3rd,9439263399,male,419207d7699dcea4d8d134bb577a3f99,true,0,
-58b03a43300b2c0fd8e58805,1008,sans,$2a$10$IsBo63L5s6GhkHfkuBHf8ex9V5ltL9aXTSf4mOCxkuBXQ8OionXrG,sanskriticool.mohapatra25@gmail.com,CET-BBSR,3rd,9437168878,female,f14101eaf1efef1d61831875bccf1841,true,0,
